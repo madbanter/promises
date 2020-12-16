@@ -15,7 +15,7 @@ var pluckFirstLineFromFileAsync = function(filePath) {
 
     fs.readFile(filePath, 'utf8', (err, fileData) => {
       if (err) {
-        reject(err, null);
+        reject(err);
       } else {
         let endlineIndex = fileData.indexOf('\n');
         let firstLine = endlineIndex > 0 ? fileData.slice(0, endlineIndex) : fileData;
