@@ -52,7 +52,7 @@ var readFileAndMakeItFunny = function(filePath, callback) {
       })
       .join('\n');
 
-    resolve(funnyFile);
+    callback(funnyFile);
   });
 };
 
